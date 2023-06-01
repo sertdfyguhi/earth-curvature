@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earth Curvature Calculator</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div id="container" class="center container">
+      <h1 class="header">Earth Curvature Calculator.</h1>
+      <input
+        type="number"
+        class="input"
+        placeholder="distance in km..."
+        id="distance"
+      />
+
+      <h3 style="margin-bottom: 0%; display: none" id="curvatureHeader">
+        Curvature:
+      </h3>
+      <p style="margin-top: 0%" id="curvatureText"></p>
+
+      <canvas
+        width="700"
+        height="400"
+        style="display: none"
+        id="visualizationCanvas"
+      ></canvas>
+    </div>
+    <div class="gradient" id="gradient"></div>
+
+    <script src="/js/visualization.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
