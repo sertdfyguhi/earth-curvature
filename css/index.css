@@ -68,6 +68,12 @@ body {
   transition: opacity ease-in 0.5s;
 }
 
+.canvas {
+  display: none;
+  width: 700px;
+  height: 400px;
+}
+
 .center {
   position: absolute;
   top: 50%;

@@ -1,6 +1,6 @@
 # Earth Curvature Calculator
 
-A online calculator for the earth's curvature.
+A online calculator for the earth's curvature with a visualization of the calculation.
 
 Website: https://sertdfyguhi.github.io/earth-curvature/
 

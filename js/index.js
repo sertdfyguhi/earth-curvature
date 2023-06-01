@@ -31,15 +31,9 @@ distanceElement.addEventListener('input', e => {
     firstInputFlag = false;
   }
 
-  let distance = distanceElement.value;
-  let curvature;
-
-  if (Math.abs(distance) > EARTH_RADIUS) {
-    distance = curvature = EARTH_RADIUS;
-    console.log('distance larger than the earth');
-  } else {
-    curvature = EARTH_RADIUS - Math.sqrt(EARTH_RADIUS_SQUARE - distance ** 2);
-  }
+  const distance = Math.min(distanceElement.value, EARTH_RADIUS);
+  const curvature =
+    EARTH_RADIUS - Math.sqrt(EARTH_RADIUS_SQUARE - distance ** 2);
 
   updateCanvas(distance, curvature);
   curvTextElement.innerHTML = createDistString(curvature);
