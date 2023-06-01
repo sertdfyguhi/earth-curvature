@@ -31,19 +31,16 @@ distanceElement.addEventListener('input', e => {
     firstInputFlag = false;
   }
 
-  const distance = distanceElement.value;
-
-  if (distance == 0) {
-    curvTextElement.innerText = '';
-  }
+  let distance = distanceElement.value;
+  let curvature;
 
   if (Math.abs(distance) > EARTH_RADIUS) {
-    console.error('distance larger than the earth');
+    distance = curvature = EARTH_RADIUS;
+    console.log('distance larger than the earth');
   } else {
-    const curvature =
-      EARTH_RADIUS - Math.sqrt(EARTH_RADIUS_SQUARE - distance ** 2);
-
-    updateCanvas(distance, curvature);
-    curvTextElement.innerHTML = createDistString(curvature);
+    curvature = EARTH_RADIUS - Math.sqrt(EARTH_RADIUS_SQUARE - distance ** 2);
   }
+
+  updateCanvas(distance, curvature);
+  curvTextElement.innerHTML = createDistString(curvature);
 });
