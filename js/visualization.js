@@ -155,7 +155,7 @@ function updateCanvas(distance, curvature) {
   context.stroke();
 
   createRotatedText(
-    `r - √r² - d² = ${curvature.toFixed(2)}km`,
+    `√r² - d² = ${-(curvature - EARTH_RADIUS).toFixed(2)}km`,
     RIGHT_ANGLE,
     canvasCenterX + 4,
     canvasCenterY - (circleRadius - scaledCurvature) / 2
